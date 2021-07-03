@@ -1,10 +1,56 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     max-width: 800px;
     width: 100%;
-    margin: auto;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    opacity: .9;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid grey;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.cart {
+    border: 1px solid grey;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+p {
+    opacity: .8;
+    span, label {
+        font-weight: 600;
+    }
+}
+
+label {
+    display: flex;
+    align-items: center;
+    input {
+        width: 40px;
+        margin-left: 10px;
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +8,36 @@
     <title>Angular-0</title>
 
     <link rel="stylesheet" href="./styles/style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <header><h1>ANGULAR</h1></header>
+        <div class="wrapper">
+            <div class="product">
+                <h2>Title product 1</h2>
+                <span class="price">20 zł</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum neque nibh, nec vehicula velit facilisis non. Pellentesque imperdiet in massa ac porttitor. Sed ultricies egestas felis, et accumsan ligula faucibus sed. Proin porttitor nisi cursus vestibulum placerat. </p>
+            </div>
 
+            <div class="cart">
+                <h3>Cart</h3>
+                <form action="" ng-controller="Cart">
+                    <p><span>Opis: </span>{{ description }}</p>
+                    <p><span>Cena: </span>{{ cost }}{{ currency }}</p>
+    
+                    <p><label for="">Ilość sztuk: <input type="number" ng-model="qty"></label></p>
+    
+                    <p><span>Podsumowanie: </span>{{ qty * cost }}{{ currency }}</p>
+    
+                    <input type="submit" value="Kupuję">
+                </form>
+            </div>
+
+        </div>  
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
