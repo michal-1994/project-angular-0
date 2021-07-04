@@ -12,29 +12,29 @@
 </head>
 <body>
     <div class="container">
-        <header><h1>ANGULAR</h1></header>
-        <div class="wrapper">
+        <h1>ANGULAR</h1>
+        <hr>
+        <div class="wrapper" ng-controller="Cart">
             <div class="product">
                 <h2>Title product 1</h2>
-                <span class="price">20 zł</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum neque nibh, nec vehicula velit facilisis non. Pellentesque imperdiet in massa ac porttitor. Sed ultricies egestas felis, et accumsan ligula faucibus sed. Proin porttitor nisi cursus vestibulum placerat. </p>
+                <p><span>Cena: </span>{{ cost }}{{ currency }}</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum neque nibh, nec vehicula velit facilisis non. Pellentesque imperdiet in massa ac porttitor.</p>
             </div>
 
             <div class="cart">
                 <h3>Cart</h3>
-                <form action="" ng-controller="Cart">
+                <form action="">
                     <p><span>Opis: </span>{{ description }}</p>
                     <p><span>Cena: </span>{{ cost }}{{ currency }}</p>
     
-                    <p><label for="">Ilość sztuk: <input type="number" ng-model="qty"></label></p>
+                    <p><label for="">Ilość sztuk: <input type="number" ng-model="qty" min="1" max="10" step="1"></label></p>
     
                     <p><span>Podsumowanie: </span>{{ qty * cost }}{{ currency }}</p>
     
                     <input type="submit" value="Kupuję">
                 </form>
             </div>
-
-        </div>  
+        </div> 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>

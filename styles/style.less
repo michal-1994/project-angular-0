@@ -7,36 +7,37 @@ body {
 .container {
     max-width: 800px;
     width: 100%;
-    margin: 50px auto;
+    margin: 75px auto;
     padding: 0 20px;
 }
 
 h1, h2, h3 {
-    opacity: .9;
+    opacity: .8;
+    text-align: left;
+    font-size: 20px;
+    padding: 0;
+    margin: 25px 0;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
 }
 
 .wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .product {
-    border: 1px solid grey;
-    width: 40%;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.price {
-    font-weight: 600;
+    width: 48%;
+    padding: 0 10px;
 }
 
 .cart {
-    border: 1px solid grey;
-    width: 40%;
-    padding: 20px;
-    border-radius: 10px;
+    width: 48%;
+    padding: 0 10px;
 }
 
 p {
@@ -53,4 +54,8 @@ label {
         width: 40px;
         margin-left: 10px;
     }
+}
+
+input[type="submit"] {
+    cursor: pointer;
 }
